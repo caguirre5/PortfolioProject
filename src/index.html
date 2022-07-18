@@ -5,12 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/style.css">
+    <!-- <link rel="stylesheet" href="./assets/css/desktop.css" media="(min-width: 780px)"> -->
+    <script src="https://kit.fontawesome.com/e3c9e02f78.js" crossorigin="anonymous"></script>
     <title>Cristian Aguirre</title>
 </head>
 <body>
     <main class="front-container">
+        <section class="front-button-container">
+
+            <nav class="main-nav">
+                <div class="toggle-menu" id="toggle-menu">
+                    <i class="fa-solid fa-bars" id="icono-menu"></i>
+                </div>
+                <ul id="main-menu" class="main-menu">
+                    <li class="main-menu__item"><a class="main-menu__link" href="">About</a></li>
+                    <li class="main-menu__item"><a class="main-menu__link" href="">Home</a></li>
+                    <li class="main-menu__item"><a class="main-menu__link" href="">Skills</a></li>
+                    <li class="main-menu__item"><a class="main-menu__link" href="">Projects</a></li>
+                    <li class="main-menu__item"><a class="main-menu__link" href="">Contact</a></li>
+                </ul>
+            </nav>
+
+            <section class="theme-button-container" id="theme-button-container">
+                <div class="theme-button">
+                    <div  class="switch" id="switch"></div>
+                </div>
+                <i class="fa-solid fa-angle-down"></i>
+            </section>
+
+        </section>
         <section class="image-container">
-            <div class="sky"></div>
+            <div class="sky" id="sky"></div>
+            <div class="sky2" id="sky2"></div>
             <div class="sun" id="sun"></div>
             <img src="./assets/pics/b1.PNG" alt="" id="b1" class="front-page__background b1"></img>
             <img src="./assets/pics/b2.PNG" alt="" id="b2" class="front-page__background b2"></img>
@@ -22,9 +48,7 @@
             </div>
             <img src="./assets/pics/b5.PNG" alt="" id="b5" class="front-page__background b5"></img>
             <img src="./assets/pics/b6.PNG" alt="" id="b6" class="front-page__background b6"></img>
-        </section>
-        <section>
-            <p><a>Explore</a></p>
+            <div class="background6-back"></div>
         </section>
     </main>
     <section class="sections container__about">
@@ -39,7 +63,7 @@
     <section class="sections container__contact">
 
     </section>
-
+    
     <script src="./assets/index.js"></script>
 </body>
 </html>
