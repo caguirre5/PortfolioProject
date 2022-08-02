@@ -11,13 +11,13 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
-    scroll-behavior: smooth;
 }
 
 .front-button-container {
@@ -57,7 +57,7 @@ body {
 .title-container{
     position: absolute;
     text-align: center;
-    font-size:1.5rem;
+    font-size:1.6rem;
     color: #fff;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
