@@ -25,6 +25,7 @@ let sun = document.getElementById('sun')
 window.addEventListener('scroll', () => {
     t1.style.transform = `translateX(-${window.scrollY/2}px)`
     t2.style.transform = `translateX(${window.scrollY/2}px)`
+    console.log(scrollY)
 })
 
 const toggleMenuElement = document.getElementById('toggle-menu')

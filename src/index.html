@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
     <!-- <link rel="stylesheet" href="./assets/css/desktop.css" media="(min-width: 780px)"> -->
     <script src="https://kit.fontawesome.com/e3c9e02f78.js" crossorigin="anonymous"></script>
     <title>Cristian Aguirre</title>
@@ -52,14 +55,31 @@
         </section>
     </main>
     <section class="sections container__about" id="about">
-        <img src="" alt="">
+        <img src="./assets/pics/LogoCristian.png" alt="" class="logo-cristian">
         <section class="text-container__about">
             <h2>Hi, I'm Cristian</h2>
             <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
         </section>
     </section>
     <section class="sections container__skills">
-
+        <section id="tag" class="Sphere container-skills-words"></section>
+        <section class="container-skills-description">
+            <p class="description">
+                Most of the projects I have carried out, have gone through a complete analysis and design process in which I apply the most efficient UX/UI trends and concepts to build projects with modern web technologies that intends to have a positive impact on users.
+            </p>
+            <h3>Front End Developer</h3>
+            <div class="progress-bar-border">
+                <div class="progress-bar-fill" style="width:80%"></div>
+            </div>
+            <h3>UX/UI designer</h3>
+            <div class="progress-bar-border">
+                <div class="progress-bar-fill" style="width:65%"></div>
+            </div>
+            <h3>Product designer</h3>
+            <div class="progress-bar-border">
+                <div class="progress-bar-fill" style="width:60%"></div>
+            </div>
+        </section>
     </section>
     <section class="sections container__work">
 
@@ -69,5 +89,36 @@
     </section>
     
     <script src="./assets/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
+    <script>
+        const Words = [
+            'Javascript',
+            'CSS',
+            'React JS',
+            'Python',
+            'Jquery',
+            'ES6+',
+            'PostgreSQL',
+            'SQL',
+            'Java',
+            'Figma',
+            'Photoshop',
+            'Illustrator',
+            'Mobile First',
+            'CodePen',
+            'GitHub'
+        ]
+
+        let tagCloud = TagCloud('.Sphere', Words, {
+            radius: 150,
+            maxSpeed:'normal',
+            initSpeed:'fast',
+            direction:'135',
+            keep:true
+        })
+
+        let color = "#FFF"
+        document.querySelector('.Sphere').style.color = color
+    </script>
 </body>
 </html>

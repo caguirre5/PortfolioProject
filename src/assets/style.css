@@ -41,6 +41,7 @@ body {
 .image-container{
     position: relative;
     width: 100%;
+    max-width: 1920px;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -60,6 +61,10 @@ body {
     font-size:1.6rem;
     color: #fff;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.title-container > h1, h3 {
+    transition: 100ms;
 }
 
 .sky {
@@ -241,12 +246,85 @@ i{
 /*Container ABOUT*/
 /*-----------------------------------------*/
 
-.container__about{
+.sections{
     width: 100%;
     height: 100vh;
     background-color: var(--solid-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-h1, h3{
-    transition: 100ms;
+.container__about {
+    background: linear-gradient(180deg, #0C1926 0%, #022340 98.96%);
+}
+
+.logo-cristian {
+    height: 250px;
+    width: 250px;
+    margin-bottom: 2rem;
+}
+
+.text-container__about {
+    width: 80vw;
+    color: #fff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.text-container__about > h2 {
+    margin-bottom: 2rem;
+}
+
+/*-----------------------------------------*/
+/*Container Skills*/
+/*-----------------------------------------*/
+
+.Sphere {
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2rem;
+}
+
+.container__skills {
+    background: linear-gradient(180deg, #022340 0%, #03588C 100%);
+}
+
+.container-skills-description{
+    width: 300px;
+    height: auto;
+    background: linear-gradient(180deg, #0C1926 0%, #022340 98.96%);
+    border-radius: 30px;
+    margin-top: 20px;
+    padding: 30px
+}
+
+.container-skills-description > h3 {
+    color: #fff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.description{
+    font-size: 1.3rem;
+    font-weight: lighter;
+    color: #fff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-bottom:30px
+}
+
+.progress-bar-border {
+    width: 100%;
+    height:5px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 5px 0 8px 0;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    border-radius: 5px;
+    background: linear-gradient(180deg, #03588C 0%, #0388A6 97.92%);
 }
