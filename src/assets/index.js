@@ -45,3 +45,10 @@ themebutton.addEventListener('click', () => {
     sun.classList.toggle('sunset')
     sky2.classList.toggle('sky2-show')
 })
+
+const fadeOut = () => {
+    const LoadWrapper = document.querySelector('.loader')
+    LoadWrapper.classList.add('fade')
+}
+
+window.addEventListener('load', fadeOut)
