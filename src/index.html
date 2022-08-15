@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./assets/style.css">
     <link rel="shortcut icon" type="image/x-icon" href="./assets/pics/TabLogo.png" />
     <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
-<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
     <!-- <link rel="stylesheet" href="./assets/css/desktop.css" media="(min-width: 780px)"> -->
     <script src="https://kit.fontawesome.com/e3c9e02f78.js" crossorigin="anonymous"></script>
     <title>Cristian Aguirre</title>
@@ -16,95 +16,113 @@
     <div class = "loader">
         <div class="spinner-loader"></div>
     </div>
-    <main class="front-container">
-        <section class="front-button-container">
-
-            <nav class="main-nav">
-                <div class="toggle-menu" id="toggle-menu">
-                    <i class="fa-solid fa-bars" id="icono-menu"></i>
+    <section class="sections-container">
+        <main class="front-container">
+            <section class="front-button-container">
+    
+                <nav class="main-nav">
+                    <div class="toggle-menu" id="toggle-menu">
+                        <i class="fa-solid fa-bars" id="icono-menu"></i>
+                    </div>
+                    <ul id="main-menu" class="main-menu">
+                        <li class="main-menu__item"><a class="main-menu__link" href="#about">About</a></li>
+                        <li class="main-menu__item"><a class="main-menu__link" href="#skills">Skills</a></li>
+                        <li class="main-menu__item"><a class="main-menu__link" href="">Projects</a></li>
+                        <li class="main-menu__item"><a class="main-menu__link" href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+    
+                <section class="theme-button-container" id="theme-button-container">
+                    <div class="theme-button">
+                        <div  class="switch" id="switch"></div>
+                    </div>
+                </section>
+    
+            </section>
+            <section class="image-container">
+                <div class="sky" id="sky"></div>
+                <div class="sky2" id="sky2"></div>
+                <div class="sun" id="sun"></div>
+                <img src="./assets/pics/b1.PNG" alt="" id="b1" class="front-page__background b1"></img>
+                <img src="./assets/pics/b2.PNG" alt="" id="b2" class="front-page__background b2"></img>
+                <img src="./assets/pics/b3.PNG" alt="" id="b3" class="front-page__background b3"></img>
+                <img src="./assets/pics/b4.PNG" alt="" id="b4" class="front-page__background b4"></img>
+                <div class="title-container">
+                    <h1 id="title">CRISTIAN AGUIRRE</h1>
+                    <h4 id="subtitle">Front End Developer</h4>
                 </div>
-                <ul id="main-menu" class="main-menu">
-                    <li class="main-menu__item"><a class="main-menu__link" href="#about">About</a></li>
-                    <li class="main-menu__item"><a class="main-menu__link" href="#skills">Skills</a></li>
-                    <li class="main-menu__item"><a class="main-menu__link" href="">Projects</a></li>
-                    <li class="main-menu__item"><a class="main-menu__link" href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-
-            <section class="theme-button-container" id="theme-button-container">
-                <div class="theme-button">
-                    <div  class="switch" id="switch"></div>
+                <img src="./assets/pics/b5.PNG" alt="" id="b5" class="front-page__background b5"></img>
+                <img src="./assets/pics/b6.PNG" alt="" id="b6" class="front-page__background b6"></img>
+                <div class="background6-back"></div>
+            </section>
+        </main>
+        <section class="sections container__about" id="about">
+            <img src="./assets/pics/LogoCristian.png" alt="" class="logo-cristian">
+            <section class="text-container__about">
+                <h2>Hi, I'm Cristian</h2>
+                <p>Passionate Front-End Developer and Product Designer looking to apply extensive skills in WEB project. </p>
+            </section>
+        </section>
+        <section class="sections container__skills" id="skills">
+            <section id="tag" class="Sphere container-skills-words"></section>
+            <section class="container-skills-description">
+                <p class="description">
+                    Most of the projects I have carried out, have gone through a design process in which I apply the most efficient UX/UI concepts and tools to build projects with modern web technologies that intends to have a positive impact on users.
+                </p>
+                <h3>Front End Developer</h3>
+                <div class="progress-bar-border">
+                    <div class="progress-bar-fill" style="width:80%"></div>
+                </div>
+                <h3>UX/UI designer</h3>
+                <div class="progress-bar-border">
+                    <div class="progress-bar-fill" style="width:65%"></div>
+                </div>
+                <h3>Product designer</h3>
+                <div class="progress-bar-border">
+                    <div class="progress-bar-fill" style="width:60%"></div>
                 </div>
             </section>
-
         </section>
-        <section class="image-container">
-            <div class="sky" id="sky"></div>
-            <div class="sky2" id="sky2"></div>
-            <div class="sun" id="sun"></div>
-            <img src="./assets/pics/b1.PNG" alt="" id="b1" class="front-page__background b1"></img>
-            <img src="./assets/pics/b2.PNG" alt="" id="b2" class="front-page__background b2"></img>
-            <img src="./assets/pics/b3.PNG" alt="" id="b3" class="front-page__background b3"></img>
-            <img src="./assets/pics/b4.PNG" alt="" id="b4" class="front-page__background b4"></img>
-            <div class="title-container">
-                <h1 id="title">CRISTIAN AGUIRRE</h1>
-                <h4 id="subtitle">Front End Developer</h4>
-            </div>
-            <img src="./assets/pics/b5.PNG" alt="" id="b5" class="front-page__background b5"></img>
-            <img src="./assets/pics/b6.PNG" alt="" id="b6" class="front-page__background b6"></img>
-            <div class="background6-back"></div>
+        <section class="sections container__work">
+    
         </section>
-    </main>
-    <section class="sections container__about" id="about">
-        <img src="./assets/pics/LogoCristian.png" alt="" class="logo-cristian">
-        <section class="text-container__about">
-            <h2>Hi, I'm Cristian</h2>
-            <p>Passionate Front-End Developer and Product Designer looking to apply extensive skills in WEB project. </p>
-        </section>
-    </section>
-    <section class="sections container__skills" id="skills">
-        <section id="tag" class="Sphere container-skills-words"></section>
-        <section class="container-skills-description">
-            <p class="description">
-                Most of the projects I have carried out, have gone through a design process in which I apply the most efficient UX/UI concepts and tools to build projects with modern web technologies that intends to have a positive impact on users.
-            </p>
-            <h3>Front End Developer</h3>
-            <div class="progress-bar-border">
-                <div class="progress-bar-fill" style="width:80%"></div>
+        <section class="sections container__contact" id="contact">
+            <div class="contact-form__container">
+                <div class="input-group">
+                    <input type="text" required>
+                    <label>Name</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-group" id="message-input">
+                    <input type="text" required>
+                    <label>Message</label>
+                </div>
+                <button class="btn">Submit</button>
             </div>
-            <h3>UX/UI designer</h3>
-            <div class="progress-bar-border">
-                <div class="progress-bar-fill" style="width:65%"></div>
-            </div>
-            <h3>Product designer</h3>
-            <div class="progress-bar-border">
-                <div class="progress-bar-fill" style="width:60%"></div>
+            <div class="contact-links__container">
+                <div class="link">
+                    <a href=""><i class="fa-solid fa-envelope"></i></a>
+                    <span>caguirre.dt@gmail.com</span>
+                </div>
+                <div class="link">
+                    <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+                    <span>Cristian Aguirre</span>
+                </div>
+                <div class="link">
+                    <a href=""><i class="fa-brands fa-github"></i></a>
+                    <span>caguirre5</span>
+                </div>
+                <div class="link">
+                    <a href=""><i class="fa-brands fa-codepen"></i></a>
+                    <span>@caguirre5</span>
+                </div>
             </div>
         </section>
     </section>
-    <section class="sections container__work">
-
-    </section>
-    <section class="sections container__contact" id="contact">
-        <div class="contact-form__container">
-            <!-- <div class="input-group">
-                <input type="text" id="name" placeholder=" ">
-                <label for="name">Name</label>
-            </div>
-            <div class="input-group">
-                <input type="text" id="email" placeholder=" ">
-                <label for="email">Email</label>
-            </div>
-            <div class="input-group">
-                <input type="text" id="subject" placeholder=" ">
-                <label for="subject">Subject</label>
-            </div>
-            <div class="input-group">
-                <input type="text" id="message" placeholder=" ">
-                <label for="message">Message</label>
-            </div> -->
-        </div>
-    </section>
+    
     
     <script src="./assets/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>

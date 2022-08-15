@@ -34,6 +34,7 @@ const menuclose = document.getElementById('icono-menu')
 const themebutton = document.getElementById('switch')
 const themebuttoncontainer = document.getElementById('theme-button-container')
 const sky2 = document.getElementById('sky2')
+const labels = document.querySelectorAll('.input-group label')
 
 toggleMenuElement.addEventListener('click', () => { 
     themebuttoncontainer.classList.toggle('theme-button__hidden')
@@ -52,3 +53,13 @@ const fadeOut = () => {
 }
 
 window.addEventListener('load', fadeOut)
+
+labels.forEach((label) => {
+    label.innerHTML = label.innerText
+    .split("")
+    .map(
+        (letter, idx) =>
+        `<span style="transition-delay:${idx * 50}ms">${letter}</span>`
+    )
+    .join("")
+})
