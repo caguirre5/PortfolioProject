@@ -33,7 +33,7 @@ body {
     width: 100%;
     height: 100vh;
     background: linear-gradient(180deg, #0C1926 0%, #022340 98.96%);
-    position: absolute;
+    position: fixed;
     z-index: 2;
     display: flex;
     align-items: center;
@@ -79,6 +79,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color:var(--solid-blue);
+    z-index: 0;
 }
 
 .image-container{
@@ -110,6 +111,18 @@ body {
 
 .title-container > h1, h3 {
     transition: 100ms;
+}
+
+@keyframes movement1 {
+    0%{
+        transform: scale(1.01)
+    }
+    50%{
+        transform: scale(1.02)
+    }
+    100%{
+        transform: scale(1.01)
+    }
 }
 
 .sky {
@@ -211,7 +224,6 @@ body {
     }
 }
 
-
   /* Header menu*/
 
 .main-nav {
@@ -257,14 +269,22 @@ body {
 }
 
 .main-menu__item {
-    padding:1em;
+    margin:20px 30px;
 }
 
 .main-menu__link {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 2rem;
+    font-weight: bold;
     color: #fff;
     text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.main-menu__link:hover{
+    background-color: rgba(0,0,0,0.2);
 }
 
 @media (min-width: 768px) {
@@ -290,9 +310,7 @@ i{
     color: #fff;
 }
 
-/*-----------------------------------------*/
-/*Container ABOUT*/
-/*-----------------------------------------*/
+
 
 .sections{
     width: 100%;
@@ -304,6 +322,10 @@ i{
     align-items: center;
     scroll-snap-align: start;
 }
+
+/*-----------------------------------------*/
+/*Container ABOUT*/
+/*-----------------------------------------*/
 
 .container__about {
     background: linear-gradient(180deg, #0C1926 0%, #022340 98.96%);
@@ -347,7 +369,8 @@ i{
     background: linear-gradient(180deg, #0C1926 0%, #022340 98.96%);
     border-radius: 30px;
     margin-top: 20px;
-    padding: 30px
+    padding: 30px;
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.5);
 }
 
 .container-skills-description > h3 {
@@ -383,22 +406,26 @@ i{
 /*-----------------------------------------*/
 
 .container__work{
-    background: linear-gradient(180deg, #03588C 0%, #0388A6 97.92%);
+    background-color:#03588C;
 }
   
   /* This allows the amount of columns to be set to 6 with each section taking up a single equal fraction. It also sets the grid row height to interchange between 100px and 300px automatically. Grid-auto-flow attemps to fill any wholes created from spanning.*/
 .container{
     display:grid;
-    grid-template-columns: repeat(6,1fr);
-    grid-auto-rows:100px 200px;
+    grid-template-columns: repeat(5,1fr);
+    grid-auto-rows:300px 200px;
     grid-gap:10px;
     grid-auto-flow:dense;
+    padding:0 10px
 }
 
 .gallery-item{
     width:100%;
     height:100%;
     position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 .gallery-item .images{
@@ -418,87 +445,51 @@ i{
 }
 
 .gallery-item:hover .images img{
-transform:scale(1.5);
+    transform:scale(1.5);
 }
 
-.gallery-item .title{
+.gallery-item .photo-information{
     opacity:0;
     position: absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-        color:#fff;
     font-size:20px;
     pointer-events:none;
     z-index:4;
     transition: .3s ease-in-out;
-    -webkit-backdrop-filter: blur(5px) saturate(1.8);
-    backdrop-filter: blur(5px) saturate(1.8);
+    -webkit-backdrop-filter: blur(5px) grayscale(30%) saturate(1.8);
+    backdrop-filter: blur(5px) saturate(1);
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
-.gallery-item:hover .title{
+.inside-information-container {
+    background-color:black;
+    color:#fff;
+    text-align:center;
+    width:200px;
+    height:200px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    border-radius: 50%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.gallery-item:hover .photo-information{
     opacity:1;
-    animation: move-down .3s linear;
+    animation: linear .3s linear;
     padding:1em;
     width:100%;
+    height: 100%;
 }
 
-/* grid-column allows an element to span however many  columns you designate, in this case it is 3 for all elements with the w-3 class. This is helpful for a dynamic grid*/
-.w-3{
-    grid-column: span 3
-}
-
-.w-2{
-    grid-column: span 2
-}
-
-.w-1{
-    grid-column: span 1
-}
-
-.w-4{
-    grid-column: span 4;
-}
-
-.w-5{
-    grid-column: span 5
-}
-
-.w-6{
-    grid-column: span 6
-}
-
-/*  grid-row allows an element to span however many  rows you designate, in this case it is 3 for all elements with the h-3 class. */
-.h-3{
-    grid-row: span 2
-}
-
-.h-1{
-    grid-row: span 1
-}
-.h-2{
-    grid-row: span 2
-}
-.h-4{
-    grid-row: span 4
-}
-.h-5{
-    grid-row: span 5
-}
-.h-6{
-    grid-row: span 6
-}
 
 /* responsive to phone screen size */
 @media screen and (max-width:550px){
     .container{
-        grid-template-columns: repeat(4,1fr);
-    }
-    .w-3,.w-4,.w-5,.w-6{
-        grid-column:span 1;
-    }
-    .h-3{
-        grid-row: span 2;
+        grid-template-columns: repeat(2,1fr);
+        grid-auto-rows:100px 100px;
     }
 }
 
@@ -522,7 +513,7 @@ transform:scale(1.5);
 /*-----------------------------------------*/
 
 .container__contact {
-    background: linear-gradient(180deg, #0388A6 0%, #0C1926 100%);
+    background: linear-gradient(180deg, #03588C 0%, #0C1926 100%);
 }
 
 .contact-form__container {
@@ -535,74 +526,6 @@ transform:scale(1.5);
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-.input-group{
-    position:relative;
-    margin: 15px 8px;
-    width: 230px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.input-group input{
-    background-color: transparent;
-    border: 0;
-    border-bottom: 2px #fff solid;
-    display: block;
-    width: 100%;
-    padding: 4px 0;
-    font-size: 14px;
-    color: #fff;
-}
-
-.input-group input:focus,
-.input-group input:valid {
-    outline:0;
-    border-bottom-color:#0388A6;
-}
-
-.input-group label{
-    position: absolute;
-    top: 5px;
-    left:5px;
-    pointer-events: none;
-    color: #fff;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size:14px;
-}
-
-.input-group label span{
-    display: inline-block;
-    font-size: 14px;
-    min-width:5px;
-    transition: 0.3s cubic-bezier(0.68,-0.55,0.265,1.55);
-}
-
-.input-group input:focus + label span,
-.input-group input:valid + label span{
-    color: #fff9;
-    transform: translateY(-25px);
-}
-
-#message-input input{
-    border-bottom: 2px #fff solid;
-    padding:40px 0;
-}
-
-#message-input input:focus,
-#message-input input:valid{
-    transition: 0.3s;
-    border-top: 2px #0388A6 solid;
-    border-bottom-color:#0388A6;
-}
-
-.btn {
-    background-color: transparent;
-    border-radius: 20px;
-    border:2px solid #fff;
-    padding: 10px 40px;
-    margin-top: 15px;
-    color: #fff;
 }
 
 .contact-links__container {
@@ -634,4 +557,161 @@ transform:scale(1.5);
 
 .link i:hover {
     background-color: rgba(255, 255, 255, 1);
+}
+
+
+
+/*-----------------------------------------*/
+/*Responsiveness*/
+/*-----------------------------------------*/
+
+@media screen and (min-width: 768px) {
+
+    .sun{
+        top: 18vh;
+        left: 50vw;
+        background-color:#fff;
+        width: 11rem;
+        height: 11rem;
+        border-radius: 50%;
+        transition: 5s;
+    }
+
+    /*Titles*/
+    .title-container>h1 {
+        font-size: 14rem;
+    }
+
+    .title-container>h4 {
+        font-size: 8rem;
+    }
+
+    /*About section*/
+    .container__about {
+        flex-direction: row;
+        z-index: 10;
+        position: absolute;
+    }
+    
+    .logo-cristian {
+        height: 40vw;
+        width: 40vw;
+        margin: 2rem;
+    }
+    
+    .text-container__about {
+        width: 40vw;
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    
+    .text-container__about > h2 {
+        font-size: 8rem
+    }
+
+    /*Skills section*/
+    .Sphere {
+        font-weight: bold;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 4rem;
+    }
+    
+    .container__skills {
+        flex-direction: row;
+        margin-top: 100vh;
+    }
+    
+    .container-skills-description{
+        width: 30%;
+        height: auto;
+        background: linear-gradient(180deg, #0C1926 0%, #022340 98.96%);
+        border-radius: 30px;
+        margin-left: 8vw;
+        padding: 50px;
+        box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.5);
+    }
+    
+    .container-skills-description > h3 {
+        font-size: 3rem;
+    }
+    
+    .description{
+        font-size: 2rem;
+        font-weight: regular;
+        color: #fff;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin-bottom:30px
+    }
+    
+    .progress-bar-border {
+        height:10px;
+    }
+
+    .contact-form__container {
+        padding: 35px;
+        width: auto;
+        height: auto;
+        background: linear-gradient(180deg, #0C1926 0%, #022340 98.96%);
+        box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.5);
+        border-radius: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .link {
+        display: flex;
+        align-items: center;
+        margin: 30px;
+    }
+    
+    .link span{
+        margin-left: 4rem;
+        color: #fff;
+        font-size: 4rem;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    .link i{
+        padding:2rem;
+        font-size: 6rem;
+    }
+    
+    .link i:hover {
+        background-color: rgba(255, 255, 255, 1);
+    }
+    
+    .contact-links-text {
+        width: auto;
+    }
+
+    /*WORK*/
+    
+    .container{
+        grid-auto-rows:200px 200px 200px;
+        grid-gap:10px;
+        grid-auto-flow:dense;
+        padding:0 10px
+    }
+
+    .work2{
+        grid-row: span 2;
+    }
+
+    .work4 {
+        grid-row: span 2;
+    }
+
+    .work6 {
+        grid-row: span 2;
+    }
+
+    .work7 {
+        grid-row: span 2;
+    }
+
+    .work8 {
+        grid-row: span 2;
+    }
 }
